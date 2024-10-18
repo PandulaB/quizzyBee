@@ -5,6 +5,8 @@
  */
 package QuizzyBee.Registstion;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author USER
@@ -134,6 +136,11 @@ public class SignIn extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Sign In");
         jButton1.setPreferredSize(new java.awt.Dimension(397, 47));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, 440, -1));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
@@ -158,6 +165,27 @@ public class SignIn extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String userEmail = jTextField1.getText();
+        String userPassword = String.valueOf(jPasswordField1.getPassword());
+        
+        if(userEmail.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please Enter Your Email!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }else if(userPassword.isEmpty()){
+            JOptionPane.showMessageDialog(this, "Please Enter Your Password!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }else{
+            
+            try {
+                
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
